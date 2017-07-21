@@ -1,0 +1,82 @@
+@import '_mixin.scss';
+.container {
+  @include blockCenter;
+  width: 90%;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pos-f {
+  position: fixed;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-r {
+  position: relative;
+}
+
+@include media(xs) {
+  .container {
+    width: 30%;
+  }
+}
+
+@include media(sm) {
+  .container {
+    width: 40%;
+    .nav {
+      display: none;
+    }
+  }
+  aside,footer {
+    display: none;
+  }
+}
+
+@include media(md) {
+  .container {
+    width: 60%;
+    .nav {
+      display: block;
+    }
+  }
+  aside,footer {
+    display: none;
+  }
+  article{
+      float: none;
+      width: 100%;
+      margin: 0 auto;
+     @include blockCenter;
+  }
+}
+
+@include media(lg) {
+  .container {
+    width: 80%;
+    @include blockCenter;
+  }
+  aside,footer {
+    display: block;
+  }
+}
+
+@include media(superbig) {
+  .container {
+    width: 80%;
+    @include blockCenter;
+  }
+}
